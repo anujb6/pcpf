@@ -1,0 +1,5 @@
+dec_to_hex(Value,Atom) :-
+    hex_canonical_width(Value,Width),
+    format(atom(Atom),'~|~`0t~16R~*|',[Value,Width]), !.
+dec_to_hex(Value,Atom) :-
+    format(atom(Atom_lower),'~16R',Value).
